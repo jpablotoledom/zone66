@@ -1,0 +1,185 @@
+
+
+
+                            How to start ZONE 66
+                            ====================
+
+ZONE 66 requires:
+  * A 386, 486, or faster IBM-compatible computer
+  * Hard disk
+  * At least 2 Megabytes of RAM
+
+To get the maximum possible performance out of your system,  ZONE 66 uses an
+ultra fast mode on your 386 or 486 PC (called "flat protected mode").  The
+advantage is a super-fast game packed with graphics.
+
+The disadvantage is, ZONE 66 will not work if you have any TSR's or memory
+managers loaded.  Most computers ARE set up to load these,  so you need to
+go through a few extra steps to start ZONE 66.
+
+(We appologize for the inconvenience,  but in creating ZONE 66 we faced a
+tradeoff -- make a plain old everyday game that is easy to start,  or make
+an incredibly fast action game...  We chose the later!)
+
+Here's the easiest way to start ZONE 66:
+
+1. Create a "boot disk"
+2. Start your computer up from the boot disk
+3. Go into your ZONE 66 directory and start ZONE 66
+
+Now here is a complete walk-through of how to begin.
+
+TO CREATE THE BOOT DISK
+=======================
+
+A.  Put a blank disk in your A: drive.
+B.  From the DOS prompt,  type the following command:
+
+       FORMAT A: /S
+
+C.  Press ENTER.
+D.  Wait while your computer formats the disk and turns it into a boot disk.
+E.  Label the disk "Zone 66 Boot Disk" and keep it handy.  You'll need this
+    disk whenever you want to start ZONE 66.
+
+TO START YOUR COMPUTER FROM THE BOOT DISK
+=========================================
+
+A.  Put the boot disk in your A: drive.
+B.  Restart your computer,  either by pressing CTRL-ALT-DELETE,  by
+    hitting your reset button,  or by turning it on.
+C.  Wait while your computer "boots" from the boot disk.
+D.  After a little while, your computer will stop and give you the A> prompt.
+
+TO START ZONE 66 AFTER DOING ALL OF THE ABOVE
+=============================================
+
+A.  Change onto your hard drive by typing:
+
+         C:          <Now press ENTER>
+
+    Note to "Stacker" owners:  If your C: drive is compressed, then you
+    should have installed ZONE 66 on a different,  non-compressed drive.
+    So type the letter of that drive instead of "C".
+
+B.  Switch into your ZONE 66 directory by typing:
+
+         CD \ZONE66
+
+    Note:  If you have installed the game in a different directory,
+    switch into that directory instead.
+
+C.  Start the game by typing:
+
+    ZONE66
+
+    If you run into any problems,  skip ahead to the TROUBLESHOOTING section.
+
+
+NOTE TO OWNERS OF "STACKER" AND OTHER DISK-COMPRESSION PROGRAMS
+===============================================================
+
+ZONE 66 will not work on a drive that is compressed with Stacker or another
+disk-compression program.  This is due to an unresolvable memory management
+conflict between the programs.
+
+If you're using Stacker or something similar,  you can get ZONE 66 to work
+on your computer by installing it on a non-compressed partition of your hard
+disk,  and by following the "boot disk" procedures listed above.  Stacker
+usually reserves the drive D: for your uncompressed partition.
+
+Note:  If your D: drive is set up so that it doesn't have enough free space
+       for ZONE 66 to fit,  consult your Stacker documentation for
+       instructions on increasing the size of the D: drive.  (No other
+       solution exists to the Stacker conflict)
+
+
+TROUBLESHOOTING
+===============
+
+Here are a list of possible problems you may run into,  as well as some
+suggested solutions.
+
+Problem:  When I type "ZONE66" to start,  the computer locks up.
+
+Solutions:
+
+   1.  ZONE 66 may have a problem detecting whether your PC has a sound card
+       installed.  Instead of typing just "ZONE66",  please type one of the
+       following commands instead:
+
+       ZONE66 /n   (If you do NOT have a sound card installed in your PC)
+       ZONE66 /s   (If you have a true Sound Blaster card)
+       ZONE66 /u   (If you have a Gravis Ultrasound card)
+       ZONE66 /a   (If you have an Adlib card)
+
+   2.  If this fails to solve the problem,  make sure that you're following
+       the correct "boot disk" procedure described above.  If you go through
+       all of the steps,  create a boot disk,  and start ZONE 66 from a boot
+       disk and it still doesn't work,  then your computer unfortunately is
+       not compatible with ZONE 66.  
+
+Problem:  When I begin playing,  my plane flies around in circles!
+
+Solutions:
+
+   1. If you DO NOT have a joystick,  then you need to start ZONE 66 with the
+      following command to remedy this problem:
+
+      ZONE66 /k   (For keyboard operation -- no joystick)
+
+   2. If you DO have a joystick,  go into the "OPTIONS" menu from the main
+      menu and select "CALIBRATE JOYSTICK".  This should solve the
+      problem.  If it doesn't,  then ZONE 66 is probably incompatible with
+      your joystick -- so use the following command to disable the joystick
+      (and then use the keyboard):
+
+      ZONE66 /k   (For keyboard operation -- if your joystick steers wrong)
+
+Problem:  Zone 66 does not work properly with my Sound Blaster card,  even
+          when I use the ZONE66 /S option.
+
+Solutions:  
+
+   1.  ZONE 66 can only recognize your Sound Blaster card if it is set for
+       IRQ 3, 5, or 7.  If your Sound Blaster is set to IRQ 2 or 10,  ZONE 66
+       will not recognize it.  To remedy this,  see your Sound Blaster
+       manual for instructions on changing the IRQ.  Or,  if you prefer, 
+       start ZONE 66 by typing "ZONE66 /a" and you'll get the Adlib musical
+       sound track, but no digital sound effects.
+
+   2.  Note that ZONE 66 is only designed for use with true Sound Blaster
+       cards,  and it may not function properly with sound cards from other
+       manufacturers.
+
+Note to Pro Audio Spectrum owners:  Zone 66 can often be made to work with the
+PAS if you create a CONFIG.SYS file that loads that PAS driver (MVSOUND.SYS).
+If this doesn't work,  try running Zone 66 with the following command:
+
+                         ZONE66 /N
+
+Problem:  Zone 66 detects my Gravis Ultrasound card,  but I don't get any
+          music.
+
+Solution: Please check your disk to make sure the file M03GMUZ.Z66 exists.
+          If it doesn't,  then you have a copy of ZONE 66 which does not
+          contain the Gravis soundtrack.  To get the Gravis soundtrack,
+          look for the file $ZONE66G.ZIP on your local BBS,  or you can get
+          the latest version of ZONE 66 Mission 1 along with the Gravis
+          sound track direct from Epic MegaGames for $5.  (See ORDERING INFO
+          within the game)
+
+
+NOTES ABOUT WINDOWS AND OS/2
+============================
+
+ZONE 66 will not run under Windows or OS/2.  Only run ZONE 66 from DOS,
+with no TSR's or memory managers loaded.
+
+
+LATER VERSIONS OF DOS
+=====================
+
+We've tested ZONE 66 with DOS versions from 3 to 5,  but DOS 6 was not yet
+released at press time.  So,  if ZONE 66 does not work from DOS 6,  you must
+create a boot disk with an earlier version of DOS.
